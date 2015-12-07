@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Course Cap Checker</title>
+		<script src="popup.js"></script>
+	</head>
+	<style type="text/css">	
+		body {
+			min-width: 200px;
+		}
+		h1 {
+			text-align: center;
+		}
+		.wrapper {
+			text-align: center;
+		}
+
+	</style>
+	<body>
+		<h1>Course Checker</h1>
+		<div class = "wrapper">
+			<table cellpadding="5" width="100%">
+				<tr>
+					<td><label>Term:</label</td>
+					<td><input type="text" id="term" size = "5"></td>
+				</tr>
+				<tr>
+					<td><label>Name:</label></td>
+					<td><input type="text" id="subject" size = "5"></td>
+				</tr>
+				<tr>
+					<td><label>Code:</label></td>
+					<td><input type="text" id="code" size = "5"></td>
+				</tr>
+			</table>
+			<button id="submit">submit</button>
+			<button id="clear">clear</button><br>
+		</div>
+		<div id = "reserved"></div>
+	</body>
+</html>
