@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function(){
 				if ( lecname.substr(0,3) == 'LEC'){
 					var cap = response.evaluate("string(" + path + "/enrollment_capacity)", response, null, XPathResult.ANY_TYPE, null).stringValue;
 					var ttl = response.evaluate("string(" + path + "/enrollment_total)", response, null, XPathResult.ANY_TYPE, null).stringValue;
-					d.getElementById("reserved").innerHTML += "<h3>" + sub + cod + ' ' + lecname + " : " + ttl + "/" + cap + "<h3>"
+					var name = response.evaluate("string(" + path + "/class/item/instructors)", response, null, XPathResult.ANY_TYPE, null).stringValue;
+					//d.getElementById("reserved").innerHTML += "<h3>" + sub + cod + ' ' + lecname + " : " + ttl + "/" + cap + "<br>" + name + "<h3>"
+					d.getElementById("reserved").innerHTML += "<h3>" + name + "<h3>"
 				}
 				next = root.iterateNext();
 				count++;
